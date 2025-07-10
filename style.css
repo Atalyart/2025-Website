@@ -1324,7 +1324,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 .site-footer {
   font-size: 14px;
-  color: #666;
+  color: #000000;
   line-height: 1.6;
 }
 
@@ -1358,19 +1358,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     flex-direction: column;
     gap: 40px;
   }
+@media (min-width: 768px) {
+  .site-footer .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
-
+}
+/* email text color */
 .site-footer a {
   color: #000000;
 }
 
 .site-footer a:hover {
-  color: #000000;
+  color: #e2457a;
   text-decoration: underline;
 }
 
 .site-footer .widget {
   margin-bottom: 30px;
+  margin-left: 50px;
 }
 
 .site-footer .widget h3 {
@@ -1398,10 +1405,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   flex-direction: column;
   align-items: flex-start;
 }
+/* This fixed the wrapping issue YAY*/
+.site-footer .row {
+  display: flex;
+  flex-wrap: nowrap;
+} 
 /* Contact section */
 .contact-inputs {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   height: 45px;
   padding-left: 15px;
   font-weight: 500;
@@ -1425,28 +1437,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 .pink-submit:hover {
-  background-color: #c93a6a;
+  background-color: #d7d7d7; 
+  color: #e2457a;
 }
 
 .social-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #e2457a;
   color: white;
+  background-color: #e2457a;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
-
+/* temp borders 
 .site-footer .col-md-4 {
   border: 1px dashed red;
-}
-
+*/
 .social-icon:hover {
-  background-color: #1A374D;
+  background-color: #eaeaea;
 }
 
 .input-spacer {
@@ -1455,7 +1467,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 .social-icon:hover,
 .site-footer .widget .social li a:hover {
-  background-color: #1A374D;
+  background-color: ##e2457a;
   color: #ffffff;
 }
 
