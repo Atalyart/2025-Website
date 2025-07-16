@@ -250,3 +250,25 @@ $(function(){
 		$('input[name="daterange"]').daterangepicker();
 	}
 })
+function showCart() {
+  const cart = document.getElementById("cartPanel");
+  cart.classList.add("show");
+
+  // Optional: auto-close after 5 seconds
+  setTimeout(() => {
+    closeCart();
+  }, 5000);
+}
+
+function closeCart() {
+  const cart = document.getElementById("cartPanel");
+  cart.classList.remove("show");
+}
+
+// Example: hook this into your add-to-cart logic
+document.querySelectorAll(".add-to-cart").forEach(button => {
+  button.addEventListener("click", function () {
+    // Your cart logic here (e.g., update quantity/price)
+    showCart();
+  });
+});
